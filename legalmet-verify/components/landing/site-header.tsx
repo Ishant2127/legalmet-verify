@@ -46,7 +46,7 @@ export function SiteHeader({ signedIn }: { signedIn: boolean }) {
         <div className="hidden items-center gap-2 md:flex">
           {signedIn ? (
             <Button asChild size="sm">
-              <Link href="/dashboard">
+              <Link href="/protected">
                 Open dashboard <ArrowRight />
               </Link>
             </Button>

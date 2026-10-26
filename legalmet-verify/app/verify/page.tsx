@@ -138,7 +138,7 @@ export default function VerifyCertificatePage() {
           {/* Preset Sample Quick-Click Pills */}
           <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
             <span className="text-zinc-500 font-medium">Test Registry IDs:</span>
-            {["LMV-CERT-2026-0101", "LMV-CERT-2026-0102", "LMV-CERT-2026-0103", "LMV-CERT-2026-0104"].map((code) => (
+            {["CERT-2026-001", "LMV-CERT-2026-0482", "LMV-CERT-2026-0915", "LMV-CERT-2026-0101"].map((code) => (
               <button
                 key={code}
                 type="button"
