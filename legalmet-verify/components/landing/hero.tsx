@@ -37,7 +37,7 @@ export function Hero() {
           >
             <span className="flex size-2 rounded-full bg-amber-400 animate-pulse" />
             <span className="font-mono text-amber-400 font-semibold tracking-wide">
-              SIH26036 • NATIONAL INITIATIVE
+              NATIONAL VERIFICATION INITIATIVE
             </span>
             <span className="text-zinc-600">|</span>
             <span>Legal Metrology Division</span>

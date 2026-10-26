@@ -230,8 +230,7 @@ export function SiteFooter() {
             LegalMet <span className="font-normal text-muted-foreground">Verify</span>
           </span>
           <p className="text-sm leading-relaxed text-muted-foreground">
-            A student innovation project for SIH26036 — Development of an Online Verification System for
-            Weighing and Measuring Instruments.
+            National Online Verification System for Weighing and Measuring Instruments governed under the Legal Metrology Act, 2009.
           </p>
         </div>
         <nav aria-label="Footer" className="grid grid-cols-2 gap-x-14 gap-y-3 text-sm sm:grid-cols-3">

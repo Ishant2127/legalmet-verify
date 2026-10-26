@@ -1,5 +1,5 @@
 -- ====================================================================
--- SIH26036 Legal Metrology Verification System
+-- Legal Metrology Verification System
 -- Phase 1 Migration: Role Types, Schemas, Verification & Issuing RPCs, and Seed Data
 -- ====================================================================
 

@@ -4,7 +4,7 @@
   <br />
   <h1>🏛️ LegalMet Verify</h1>
   <p><strong>National Online Metrology Verification & Cryptographic Registry System</strong></p>
-  <p><em>Smart India Hackathon (SIH26036) • Ministry of Consumer Affairs, Food & Public Distribution</em></p>
+  <p><em>Ministry of Consumer Affairs, Food & Public Distribution • Directorate of Legal Metrology</em></p>
 
   <p>
     <a href="#key-features"><strong>Features</strong></a> ·
@@ -131,5 +131,5 @@ The application is fully optimized for **Vercel** with Turbopack zero-error buil
 ---
 
 <div align="center">
-  <sub>Developed for Smart India Hackathon (SIH26036) • Directorate of Legal Metrology</sub>
+  <sub>Directorate of Legal Metrology • Ministry of Consumer Affairs, Food & Public Distribution</sub>
 </div>

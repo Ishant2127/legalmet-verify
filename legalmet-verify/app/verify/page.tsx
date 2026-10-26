@@ -101,7 +101,7 @@ export default function VerifyCertificatePage() {
             <div>
               <span className="text-[11px] font-mono tracking-widest text-amber-400 uppercase font-bold flex items-center gap-1.5">
                 <Sparkles className="w-3 h-3 text-amber-400" />
-                SIH26036 • Ministry of Consumer Affairs, Food & Public Distribution
+                Directorate of Legal Metrology • Ministry of Consumer Affairs, Food & Public Distribution
               </span>
               <h1 className="text-2xl font-bold tracking-tight text-white mt-0.5">
                 Legal Metrology National Verification Registry
