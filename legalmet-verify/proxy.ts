@@ -40,6 +40,7 @@ export async function proxy(request: NextRequest) {
   if (
     pathname.startsWith("/verify") ||
     pathname.startsWith("/auth") ||
+    pathname.endsWith(".zip") ||
     pathname === "/"
   ) {
     return supabaseResponse;
