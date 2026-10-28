@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 32% 97.5%;
+    --foreground: 240 8% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 8% 9%;
+    --card-elevated: 42 30% 99%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 8% 9%;
+    --primary: 36 78% 38%;
+    --primary-foreground: 42 40% 98%;
+    --secondary: 42 20% 92%;
+    --secondary-foreground: 240 8% 12%;
+    --muted: 42 20% 93%;
+    --muted-foreground: 240 5% 42%;
+    --accent: 36 78% 38%;
+    --accent-foreground: 42 40% 98%;
+    --gold: 36 78% 38%;
+    --gold-strong: 32 85% 32%;
+    --gold-soft: 40 60% 90%;
+    --gold-foreground: 42 40% 98%;
+    --success: 158 60% 32%;
+    --success-soft: 158 40% 91%;
+    --success-foreground: 158 50% 18%;
+    --warning: 32 85% 38%;
+    --warning-soft: 38 80% 90%;
+    --warning-foreground: 32 60% 18%;
+    --danger: 0 65% 45%;
+    --danger-soft: 0 70% 94%;
+    --danger-foreground: 0 50% 25%;
+    --info: 199 75% 38%;
+    --info-soft: 199 70% 92%;
+    --info-foreground: 199 60% 20%;
+    --border: 40 18% 87%;
+    --input: 40 18% 84%;
+    --ring: 36 78% 38%;
+    --chart-1: 36 78% 38%;
+    --chart-2: 158 60% 32%;
+    --chart-3: 199 75% 38%;
+    --chart-4: 280 45% 48%;
+    --chart-5: 0 65% 45%;
+    --radius: 0.85rem;
+  }
+
+  .dark {
+    --background: 240 5% 4%;
+    --foreground: 40 18% 94%;
+    --card: 240 4% 6.5%;
+    --card-foreground: 40 18% 94%;
+    --card-elevated: 240 4% 9%;
+    --popover: 240 4% 7%;
+    --popover-foreground: 40 18% 94%;
+    --primary: 40 72% 60%;
+    --primary-foreground: 240 6% 5%;
+    --secondary: 240 4% 12%;
+    --secondary-foreground: 40 18% 94%;
+    --muted: 240 4% 11%;
+    --muted-foreground: 240 4% 62%;
+    --accent: 40 72% 60%;
+    --accent-foreground: 240 6% 5%;
+    --gold: 40 72% 60%;
+    --gold-strong: 38 82% 53%;
+    --gold-soft: 40 40% 14%;
+    --gold-foreground: 240 6% 5%;
+    --success: 156 62% 46%;
+    --success-soft: 156 40% 12%;
+    --success-foreground: 150 30% 92%;
+    --warning: 38 90% 58%;
+    --warning-soft: 38 50% 13%;
+    --warning-foreground: 40 50% 92%;
+    --danger: 0 68% 55%;
+    --danger-soft: 0 40% 13%;
+    --danger-foreground: 0 50% 94%;
+    --info: 199 80% 56%;
+    --info-soft: 199 50% 12%;
+    --info-foreground: 199 50% 94%;
+    --border: 240 4% 14%;
+    --input: 240 4% 17%;
+    --ring: 40 72% 60%;
+    --chart-1: 40 72% 60%;
+    --chart-2: 156 62% 46%;
+    --chart-3: 199 80% 56%;
+    --chart-4: 280 50% 62%;
+    --chart-5: 0 68% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01" 1, "cv01" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: hsl(var(--gold) / 0.28);
+    color: hsl(var(--foreground));
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 999px;
+    border: 3px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring) / 0.7);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .app-shell-bg {
+    background-image:
+      radial-gradient(900px 460px at 50% -12%, hsl(var(--gold) / 0.07), transparent 62%),
+      radial-gradient(700px 420px at 100% 0%, hsl(var(--info) / 0.04), transparent 58%);
+    background-attachment: fixed;
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.42) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.42) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 78%);
+  }
+
+  .glass {
+    background: hsl(var(--card) / 0.72);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid hsl(var(--border) / 0.8);
+  }
+
+  .surface {
+    @apply rounded-2xl border border-border bg-card text-card-foreground shadow-card;
+  }
+
+  .surface-elevated {
+    @apply rounded-2xl border border-border bg-card-elevated text-card-foreground shadow-card;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-gold;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+
+  .gold-text {
+    background: linear-gradient(100deg, hsl(var(--gold-strong)), hsl(var(--gold)), hsl(var(--foreground) / 0.9));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gold-border {
+    position: relative;
+  }
+  .gold-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      140deg,
+      hsl(var(--gold) / 0.55),
+      hsl(var(--border) / 0.2) 38%,
+      hsl(var(--border) / 0.2) 62%,
+      hsl(var(--gold) / 0.25)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .certificate-paper {
+    position: relative;
+    background:
+      radial-gradient(1100px 300px at 50% 0%, hsl(var(--gold) / 0.07), transparent 60%),
+      hsl(var(--card));
+    box-shadow:
+      inset 0 0 0 1px hsl(var(--gold) / 0.18),
+      inset 0 0 0 5px hsl(var(--card)),
+      inset 0 0 0 6px hsl(var(--border) / 0.7),
+      0 40px 90px -50px hsl(var(--background) / 1);
+  }
+
+  .certificate-watermark {
+    background-image: radial-gradient(circle, hsl(var(--gold) / 0.09) 0 1px, transparent 1px);
+    background-size: 14px 14px;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 rounded-xl px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground;
+  }
+  .nav-link[data-active="true"] {
+    @apply bg-gold-soft/70 text-foreground;
+    box-shadow: inset 0 0 0 1px hsl(var(--gold) / 0.18);
+  }
+
+  .table-head {
+    @apply bg-muted/40 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground;
+  }
+
+  .kbd {
+    @apply inline-flex h-5 min-w-5 items-center justify-center rounded border border-border bg-muted px-1 font-mono text-[10px] text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+  }
+  .animate-delay-150 {
+    animation-delay: 150ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+}
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .print-hidden {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .certificate-paper {
+    box-shadow: none !important;
+    border: 1px solid #111 !important;
+    background: #fff !important;
+    break-inside: avoid;
+  }
+  .print-full {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  a[href]::after {
+    content: "";
+  }
+}
