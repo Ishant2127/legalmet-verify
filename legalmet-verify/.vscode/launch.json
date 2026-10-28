@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: dev server",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "skipFiles": ["<node_internals>/**"],
+      "serverReadyAction": {
+        "pattern": "- Local:.+(https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      },
+      "console": "integratedTerminal",
+      "env": {
+        "NEXT_TELEMETRY_DISABLED": "1"
+      }
+    },
+    {
+      "name": "Next.js: attach to running dev server",
+      "type": "node",
+      "request": "attach",
+      "port": 9230,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Chrome: http://localhost:3000",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
